@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Cybergame-manager", "GUI_Cybergame-manager\GUI_Cybergame-manager.csproj", "{3A762AC8-A474-48D1-81EA-7BF093A8512E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS_Cybergame-managers", "BUS_Cybergame-managers\BUS_Cybergame-managers.csproj", "{6BAB9A22-EEA1-431E-AE92-EFE1AF677D97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_Cybergame-managers", "DAL_Cybergame-managers\DAL_Cybergame-managers.csproj", "{8DDB7342-22CD-4BA6-A4D0-9E2EF21C7822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "DTO_Cybergame-managers\Entities.csproj", "{2A0FA621-8D35-47AD-9B95-FDBE7035D1ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Cybergame-users", "GUI_Cybergame-users\GUI_Cybergame-users.csproj", "{1D55EB93-1BDD-4AC5-8EF1-050DC138D2E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Untility", "ClassLibrary1\Untility.csproj", "{ED872084-F6F8-414B-98EE-4B46B6ABF7DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A762AC8-A474-48D1-81EA-7BF093A8512E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A762AC8-A474-48D1-81EA-7BF093A8512E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A762AC8-A474-48D1-81EA-7BF093A8512E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A762AC8-A474-48D1-81EA-7BF093A8512E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BAB9A22-EEA1-431E-AE92-EFE1AF677D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BAB9A22-EEA1-431E-AE92-EFE1AF677D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BAB9A22-EEA1-431E-AE92-EFE1AF677D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BAB9A22-EEA1-431E-AE92-EFE1AF677D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDB7342-22CD-4BA6-A4D0-9E2EF21C7822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDB7342-22CD-4BA6-A4D0-9E2EF21C7822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDB7342-22CD-4BA6-A4D0-9E2EF21C7822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDB7342-22CD-4BA6-A4D0-9E2EF21C7822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0FA621-8D35-47AD-9B95-FDBE7035D1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0FA621-8D35-47AD-9B95-FDBE7035D1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0FA621-8D35-47AD-9B95-FDBE7035D1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0FA621-8D35-47AD-9B95-FDBE7035D1ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D55EB93-1BDD-4AC5-8EF1-050DC138D2E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D55EB93-1BDD-4AC5-8EF1-050DC138D2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D55EB93-1BDD-4AC5-8EF1-050DC138D2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D55EB93-1BDD-4AC5-8EF1-050DC138D2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED872084-F6F8-414B-98EE-4B46B6ABF7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED872084-F6F8-414B-98EE-4B46B6ABF7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED872084-F6F8-414B-98EE-4B46B6ABF7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED872084-F6F8-414B-98EE-4B46B6ABF7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43C06650-B679-4B5D-AB74-4B7452083FF1}
+	EndGlobalSection
+EndGlobal
