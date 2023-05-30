@@ -226,7 +226,8 @@ namespace GUI_Cybergame_manager
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Microsoft Word | *.docx";
             saveFileDialog.Title = "Lưu thông tin lớp";
-            string filePath = "C:\\hoadon\\" + localVal.EMPID+ "-" + ".docx";
+            DateTime today = DateTime.Now;
+            string filePath = "C:\\hoadon\\"+ localVal.EMPID + "-" + today.Day + "-" + today.Hour + "-" + today.Minute + "-" + today.Second + ".docx";
             FileInfo fi = new FileInfo(filePath);
             fi.Create().Close();
             if (fi.FullName != "")

@@ -18,6 +18,7 @@ using System.Xml.Linq;
 using SuperSimpleTcp;
 using System.Globalization;
 using Newtonsoft.Json;
+using System.Net.Sockets;
 
 namespace GUI_Cybergame_users
 {
@@ -330,6 +331,7 @@ namespace GUI_Cybergame_users
             mess.Add(orderData);
             string dataSend = JsonConvert.SerializeObject(mess);
             client.Send(dataSend); // gửi dữ liệu JSON lên server
+            flOrderlist.Controls.Clear();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

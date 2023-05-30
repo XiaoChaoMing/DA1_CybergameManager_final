@@ -19,6 +19,7 @@ using Newtonsoft.Json;
 using Entities;
 using Untiliti;
 using System.Data.Odbc;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace GUI_Cybergame_manager
 {
@@ -200,6 +201,15 @@ namespace GUI_Cybergame_manager
                 ForeColor = Color.White,
 
             });
+            pnItem.Controls.Add(new Guna2HtmlLabel()
+            {
+                Tag = "user",
+                Text = "id"+x.customerID.ToString(),
+                Location = new Point(280, 15),
+                Anchor = AnchorStyles.Left | AnchorStyles.Right,
+                ForeColor = Color.White,
+
+            });
             flpOrderList.Controls.Add(pnItem);
         }
         private void UpdatePanelFromData(List<string> data)
@@ -255,7 +265,8 @@ namespace GUI_Cybergame_manager
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Microsoft Word | *.docx";
             saveFileDialog.Title = "Lưu thông hóa đơn";
-            string filePath = "C:\\hoadon\\" + localVal.EMPID + "-" + ".docx";
+            DateTime today = DateTime.Now;
+            string filePath = "C:\\hoadon\\" + localVal.EMPID +"-"+today.Day +"-"+ today.Hour +"-"+ today.Minute +"-"+today.Second  +".docx";
             FileInfo fi = new FileInfo(filePath);
             fi.Create().Close();
             if (fi.FullName != "")
@@ -297,27 +308,21 @@ namespace GUI_Cybergame_manager
                 string name = panel.Controls.OfType<Guna2HtmlLabel>().FirstOrDefault(control => control.Tag == "nameItem")?.Text;
                 string price = panel.Controls.OfType<Guna2HtmlLabel>().FirstOrDefault(control => control.Tag == "price")?.Text;
 
-                MessageBox.Show($"{idItem}", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                MessageBox.Show($"{price}", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                MessageBox.Show($"{quantity}", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
                 try
                 {
 
                     int val = odt.Insert(idOrder, int.Parse(idItem), decimal.Parse(price), int.Parse(quantity));
                     if (val == -1)
                         MessageBox.Show("Thêm dữ liệu không thành công, hãy kiểm tra lại!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    else
-                    {
-                        MessageBox.Show("Đã thêm dữ liệu thành công!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    
                 }
                 catch
                 {
                     MessageBox.Show("Không thêm được dữ liệu, có thể do lỗi CSDL!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                
-
             }
+            flpOrderList.Controls.Clear();
             KetXuatWord();
         }
     }
